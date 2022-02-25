@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.get("/testrollbar", (req, res) => {
   doesnotexist();
  
-}
+})
 
 
 
