@@ -27,7 +27,27 @@ app.get("/testrollbar", (req, res) => {
     rollbar.log("This function does not exist", e);
   }
   
- 
+ })
+app.get("/cake", (req, res) => {
+  try {
+    burnedcake();
+  } catch (e) { 
+  rollbar.critical("The oven is turned on too high");
+  }
+}) 
+app.get("cookies", (req, res) => {
+  try {
+    tooMuchFlour();
+  } catch (e) {
+    rollbar.error("the cookies will be too hard");
+  }
+})
+app.get("cupcake", (req, res) => {
+  try {
+    overFill();
+  } catch (e) {
+    rollbar.warning(" Overfill will cause side spill");
+  }
 })
 
 
