@@ -21,7 +21,12 @@ app.get('/', (req, res) => {
 
 })
 app.get("/testrollbar", (req, res) => {
-  doesnotexist();
+  try {
+    doesnotexist();
+  } catch (e) {
+    Rollbar.error("This function does not exist", e);
+  }
+  
  
 })
 
