@@ -35,14 +35,14 @@ app.get("/cake", (req, res) => {
   rollbar.critical("The oven is turned on too high");
   }
 }) 
-app.get("cookies", (req, res) => {
+app.get("/cookies", (req, res) => {
   try {
     tooMuchFlour();
   } catch (e) {
     rollbar.error("the cookies will be too hard");
   }
 })
-app.get("cupcake", (req, res) => {
+app.get("/cupcake", (req, res) => {
   try {
     overFill();
   } catch (e) {
