@@ -24,7 +24,7 @@ app.get("/testrollbar", (req, res) => {
   try {
     doesnotexist();
   } catch (e) {
-    Rollbar.error("This function does not exist", e);
+    rollbar.log("This function does not exist", e);
   }
   
  
